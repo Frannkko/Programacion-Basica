@@ -1,0 +1,21 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* Tres columnas con diferentes proporciones */
+    grid-template-rows: auto auto; /* Dos filas automáticas */
+    gap: 10px; /* Espacio entre los elementos */
+    height: 100vh;
+}
+
+.grid-item {
+    background-color: lightseagreen;
+    padding: 20px;
+    text-align: center;
+}
+
+.grid-item:nth-child(1) {
+    grid-column: span 2; /* El primer elemento ocupa dos columnas */
+}
+
+.grid-item:nth-child(2) {
+    grid-row: span 2; /* El segundo elemento ocupa dos filas */
+}

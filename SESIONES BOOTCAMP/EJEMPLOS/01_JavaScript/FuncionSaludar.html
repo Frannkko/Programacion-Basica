@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Función en JavaScript</title>
+    <script>
+        // Definición de la función de saludo
+        function saludar(nombre) {
+            return `Hola, ${nombre}!`;
+        }
+
+        // Función para mostrar el saludo en el HTML
+        function mostrarSaludo() {
+            // Obtener el valor del campo de texto
+            const nombre = document.getElementById("nombre").value;
+            // Llamar a la función saludar y obtener el mensaje
+            const mensaje = saludar(nombre);
+            // Mostrar el mensaje en el elemento con id "resultado"
+            document.getElementById("resultado").textContent = mensaje;
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Saludador en JavaScript</h1>
+
+    <!-- Campo para ingresar el nombre -->
+    <label for="nombre">Escribe tu nombre:</label>
+    <input type="text" id="nombre" placeholder="Tu nombre por favor">
+    <br><br>
+    <!-- Botón para ejecutar la función -->
+    <button onclick="mostrarSaludo()">Saludar</button>
+
+    <!-- Elemento donde se mostrará el saludo -->
+    <p id="resultado"></p>
+
+</body>
+</html>
