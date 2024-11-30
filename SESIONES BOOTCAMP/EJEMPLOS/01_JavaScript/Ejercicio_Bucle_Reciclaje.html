@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recolección de Residuos para el Cuidado del Medio Ambiente</title>
+    <script src="Reciclaje.js" defer></script> <!-- Enlace al archivo JS externo -->
+</head>
+<body>
+
+    <h1>Recolección de Residuos</h1>
+    <p>Ingresa las metas de recolección para cada tipo de residuo.</p>
+
+    <!-- Campos para ingresar las metas de recolección -->
+    <label for="metaPlastico">Meta para plástico:</label>
+    <input type="number" id="metaPlastico" placeholder="Ingresa la meta para plástico">
+    <br>
+    <label for="metaPapel">Meta para papel:</label>
+    <input type="number" id="metaPapel" placeholder="Ingresa la meta para papel">
+    <br>
+    <label for="metaOrganico">Meta para orgánico:</label>
+    <input type="number" id="metaOrganico" placeholder="Ingresa la meta para orgánico">
+    <br>
+    <!-- Botón para iniciar la simulación -->
+    <button onclick="iniciarRecoleccion()">Iniciar Recolección</button>
+
+    <!-- Elemento donde se mostrarán los resultados -->
+    <div id="resultado"></div>
+
+</body>
+</html>

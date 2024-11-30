@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Tipos de Funciones en JavaScript</title>
+    <script>
+        // Función declarativa
+        function dobleDeclarativa(numero) {
+            return numero * 2;
+        }
+
+        // Función anónima asignada a una variable
+        const dobleAnonima = function(numero) {
+            return numero * 2;
+        };
+
+        // Función de flecha
+        const dobleFlecha = (numero) => numero * 2;
+
+        // Función para mostrar resultados en el HTML
+        function calcularDobles() {
+            // Obtener el valor ingresado por el usuario
+            const numero = parseFloat(document.getElementById("numero").value);
+
+            // Verificar que el valor ingresado sea un número válido
+            if (isNaN(numero)) {
+                document.getElementById("resultado").textContent = "Por favor, ingresa un número válido.";
+                return;
+            }
+
+            // Llamar a cada tipo de función y mostrar el resultado
+            const resultadoDeclarativa = dobleDeclarativa(numero);
+            const resultadoAnonima = dobleAnonima(numero);
+            const resultadoFlecha = dobleFlecha(numero);
+
+            // Mostrar los resultados en el elemento "resultado"
+            document.getElementById("resultado").innerHTML = `
+                <p>Resultado (Función Declarativa): ${resultadoDeclarativa}</p>
+                <p>Resultado (Función Anónima): ${resultadoAnonima}</p>
+                <p>Resultado (Función Flecha): ${resultadoFlecha}</p>
+            `;
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Ejemplo de Tipos de Funciones en JavaScript</h1>
+
+    <!-- Campo para ingresar el número -->
+    <label for="numero">Ingresa un número:</label>
+    <input type="text" id="numero" placeholder="Escribe un número">
+
+    <!-- Botón para ejecutar el cálculo -->
+    <button onclick="calcularDobles()">Calcular Dobles</button>
+
+    <!-- Elemento donde se mostrarán los resultados -->
+    <div id="resultado"></div>
+
+</body>
+</html>

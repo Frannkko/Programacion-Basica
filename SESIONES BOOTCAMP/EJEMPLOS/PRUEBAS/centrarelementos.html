@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+
+        .contenedor{
+            background-color: khaki;
+            height: 50vh;
+            margin: 5%;
+
+            display: flex;
+            flex-direction: row; 
+            justify-content: center; /* Modifica el eje x (Pero si flex-direcion está en column, es lo opuesto). Por ejemplo: flex-end envía el texto hacia la derecha y flex-start los envia hacia la izquierda */
+            align-items: center; /* Modifica el eje y (Pero si flex-direcion está en column, es lo opuesto). Por ejemplo: flex-end envía el texto hacia abajo y flex-start los envia hacia arriba */
+
+            /* justify-content: space-around: distribuye el espacio disponible alrededor de los elementos
+            
+            justify-content: space-between: cada elemento se va a su esquina*/
+        }
+
+        p{
+            width: 50%;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Céntrame</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nemo, fugiat pariatur, dolorem culpa omnis quod quas harum placeat voluptatum autem ab nisi sint voluptates aliquam ullam vero atque facere?</p>
+    </div>
+    
+</body>
+</html>
