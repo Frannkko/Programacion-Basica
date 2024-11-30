@@ -1,8 +1,0 @@
-let name = "María";
-let lastname = "López";
-
-let greeting = "Hi, "+name+" "+lastname+"!";
-let greetingwithtemplate = `Hi, ${name} ${lastname}!`;
-
-console.log(greeting);
-console.log(greetingwithtemplate);

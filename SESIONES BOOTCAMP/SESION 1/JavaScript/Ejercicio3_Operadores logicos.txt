@@ -1,8 +1,0 @@
-let Adult = true;
-let Permission = false;
-
-let enter = Adult && Permission;
-let exit = Adult||Permission;
-
-console.log("Can he/she enter?", enter);
-console.log("Can he/she exit?", exit);
