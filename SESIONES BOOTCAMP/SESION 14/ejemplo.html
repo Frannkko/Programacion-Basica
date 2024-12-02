@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú con Submenú Desplegable</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="https://www.example.com" target="_blank">Programación Web</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a></li>
+                <li><a href="https://www.python.org/doc/" target="_blank">Python</a></li>
+                <li class="dropdown">
+                    <a href="#">HTML & CSS</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://www.w3schools.com/html/" target="_blank">HTML Básico</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">Guía Avanzada HTML</a></li>
+                        <li class="dropdown">
+                            <a href="#">CSS</a>
+                            <ul class="dropdown-menu sub-menu">
+                                <li><a href="https://www.w3schools.com/css/" target="_blank">CSS Básico</a></li>
+                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS Avanzado</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="https://react.dev/" target="_blank">React</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <p>Explora los enlaces en la barra de navegación para aprender más sobre programación.</p>
+    </main>
+    <footer>
+        <p>&copy; 2024 Programación Web. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

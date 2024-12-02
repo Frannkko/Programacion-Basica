@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+</head>
+<body>
+    <h1>Funciones</h1>
+    <script>
+          let texto='hoy es viernes'
+        //funcion simple
+        function saludo(){
+          
+            console.log(texto)
+            console.log('Buenos días, cómo estás?')
+        }
+        //llamar a una funcion
+        saludo()
+        //funcion con parametros
+        function sum(numero,numero2){
+            
+            console.log('suma:',numero+numero2)
+        }
+        sum(15,7)
+        function doble(numero){
+            return numero*2
+        }
+        let resultado=doble(20)
+        console.log('Doble:',resultado)
+        //funcion anonima
+        const suma=function(a,b){return a+b}
+        console.log('suma:',suma(3,4))
+        //funciones flecha
+        const sumaf=(a,b)=>a+b;
+       console.log('Sumaf:',sumaf(20,30))
+       //calculadora básica
+        const sumar=(n1,n2)=>n1+n2
+        const restar=(n1,n2)=>n1-n2
+        const multiplicar=(n1,n2)=>n1*n2
+        const dividir=(n1,n2)=>n1/n2
+
+        const calculadora=(n1,n2,operacion)=>{
+            switch(operacion){
+                case 'sumar':
+                    return sumar(n1,n2)
+                case 'restar':
+                    return restar(n1,n2)
+                case 'multiplicar':
+                    return multiplicar(n1,n2)
+                case 'dividir':
+                    return dividir(n1,n2)
+                default:
+                    return 'Operación no válida...'
+            }
+        }
+        //programa principal
+        let numero1=parseFloat(prompt('Ingrese el primer número:'))
+        let numero2=parseFloat(prompt('Ingrese el segundo número:'))
+        let operacion=prompt('Ingrese la operación:')
+
+        let res=calculadora(numero1,numero2,operacion)
+        console.log('El resultado es:',res)
+    </script>
+</body>
+</html>

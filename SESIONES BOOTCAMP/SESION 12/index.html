@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratorio 12 - Bucles en JavaScript</title>
+</head>
+<body>
+  <h1>Laboratorio 12: Explorando Bucles en JavaScript</h1>
+  
+  <button onclick="ejecutarParte1()">Ejecutar Parte 1 (Bucle for)</button>
+  <br><br>
+  <button onclick="ejecutarParte2()">Ejecutar Parte 2 (Bucle while)</button>
+  <br><br>
+  <button onclick="ejecutarParte3()">Ejecutar Parte 3 (Bucle do...while)</button>
+  
+  <script>
+    // Parte 1: Bucle for
+    function ejecutarParte1() {
+      const numeros = [10, 20, 30, 40, 50];
+      let sumaTotal = 0;
+
+      for (let i = 0; i < numeros.length; i++) {
+        sumaTotal += numeros[i];
+      }
+
+      const pregunta1 = "¿Cómo se modifica el código para calcular el promedio de los números?";
+      const respuesta1 = "Se divide la suma total entre la cantidad de elementos del arreglo.";
+
+      console.log("=== Parte 1: Bucle for ===");
+      console.log(`Suma total: ${sumaTotal}`);
+      console.log(pregunta1);
+      console.log(respuesta1);
+    }
+
+    // Parte 2: Bucle while
+    function ejecutarParte2() {
+      let numero;
+      let contador = 0;
+
+      while (true) {
+        numero = parseInt(prompt("Ingrese un número (ingrese un número negativo para terminar):"));
+        if (numero < 0) break;
+        contador++;
+      }
+
+      const pregunta2 = "¿Qué sucede si se inicializa el contador con un valor negativo?";
+      const respuesta2 = "El programa funcionará correctamente porque el contador no afecta la lógica del bucle, que se basa en los valores ingresados.";
+
+      console.log("=== Parte 2: Bucle while ===");
+      console.log(`Se ingresaron ${contador} números positivos.`);
+      console.log(pregunta2);
+      console.log(respuesta2);
+    }
+
+    // Parte 3: Bucle do...while
+    function ejecutarParte3() {
+      const contraseñaCorrecta = "1234";
+      let contraseñaIngresada;
+
+      do {
+        contraseñaIngresada = prompt("Ingrese la contraseña:");
+      } while (contraseñaIngresada !== contraseñaCorrecta);
+
+      const pregunta3 = "¿Por qué se usa un bucle `do...while` en este caso en lugar de `while`?";
+      const respuesta3 = "Porque se debe ejecutar al menos una vez la solicitud de contraseña antes de comprobar si es correcta.";
+
+      console.log("=== Parte 3: Bucle do...while ===");
+      console.log("Contraseña correcta ingresada.");
+      console.log(pregunta3);
+      console.log(respuesta3);
+    }
+  </script>
+</body>
+</html>
