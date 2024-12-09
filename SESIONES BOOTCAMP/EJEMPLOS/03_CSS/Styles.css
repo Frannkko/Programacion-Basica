@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 5px; /* Espacio entre elementos */
+    padding: 5px; /* Espacio interno */
+}
+
+.item {
+    background-color: #4e45a0; /* Color de fondo */
+    color: white; /* Color del texto */
+    display: flex;
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    width: calc(33.33% - 20px); /* Ancho para pantallas grandes */
+    height: 100px; /* Altura fija */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Efecto de transición */
+}
+
+.item:hover {
+    background-color: #45a049; /* Cambia el color al pasar el mouse */
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 800px) {
+    .item {
+        width: calc(50% - 20px); /* Ancho para pantallas medianas */
+    }
+}
+
+@media (max-width: 500px) {
+    .item {
+        width: calc(100% - 20px); /* Ancho para pantallas pequeñas */
+    }
+}

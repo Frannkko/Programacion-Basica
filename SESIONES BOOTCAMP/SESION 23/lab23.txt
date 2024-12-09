@@ -1,0 +1,58 @@
+-- create a table
+CREATE TABLE employees (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    lastname TEXT NOT NULL,
+    gender TEXT NOT NULL,
+    position TEXT NOT NULL,
+    salary INTEGER NOT NULL,
+    age INTEGER NOT NULL,
+    phone INTEGER NOT NULL,
+    address TEXT NOT NULL
+);
+
+-- insert some values
+INSERT INTO employees VALUES (1, 'Ryan', 'Smith', 'M', 'scientist', '7000', '52', '15552002000', '14th street 2nd career');
+INSERT INTO employees VALUES (2, 'Joanna', 'Guzmán', 'F', 'psychologist', '3000', '29', '15552402000', '17th street 35th career');
+INSERT INTO employees VALUES (3, 'Carlos', 'Mendez', 'M', 'engineer', '5000', '35', '15553003000', '21st avenue 10th street');
+INSERT INTO employees VALUES (4, 'Sophia', 'Lopez', 'F', 'teacher', '2500', '28', '15553104000', '8th street 15th avenue');
+INSERT INTO employees VALUES (5, 'Michael', 'Johnson', 'M', 'developer', '4500', '40', '15553205000', '12th avenue 22nd street');
+INSERT INTO employees VALUES (6, 'Emma', 'Garcia', 'F', 'designer', '3700', '31', '15553306000', '5th avenue 3rd block');
+INSERT INTO employees VALUES (7, 'David', 'Martinez', 'M', 'doctor', '8000', '45', '15553407000', 'Main street 12th sector');
+INSERT INTO employees VALUES (8, 'Isabella', 'Hernandez', 'F', 'lawyer', '6500', '37', '15553508000', '2nd street 8th sector');
+INSERT INTO employees VALUES (9, 'James', 'Clark', 'M', 'chef', '2900', '30', '15553609000', 'Market street 5th corner');
+INSERT INTO employees VALUES (10, 'Olivia', 'Rodriguez', 'F', 'nurse', '3200', '26', '15553701000', '9th avenue 4th building');
+
+-- fetch some values
+SELECT '-----------';
+SELECT 'Salaries higher than 45000 and Ages higher than 31';
+SELECT name, lastname, salary, age FROM employees WHERE salary > 2500 OR age > 25;
+
+UPDATE employees
+SET salary = salary * 1.1
+WHERE id = 1 OR id = 2;
+
+SELECT '-----------';
+SELECT 'Salaries increased in an 100%';
+SELECT name, salary FROM employees WHERE id = 1 OR id = 2;
+
+UPDATE employees
+SET phone = 15553407000
+WHERE id = 7;
+
+UPDATE employees
+SET phone = 15553508000
+WHERE id = 8;
+
+SELECT '-----------';
+SELECT 'Numbers updated';
+SELECT name, phone FROM employees WHERE id IN (7, 8);
+
+SELECT '-----------';
+SELECT 'View the entire table';
+SELECT * FROM employees;
+
+SELECT '-----------';
+DELETE FROM employees WHERE id = 3;
+SELECT 'View the entire table without the id 3';
+SELECT * FROM employees;

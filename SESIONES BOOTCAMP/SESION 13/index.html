@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora Básica</h1>
+    <script>
+        // Función de saludo para el usuario
+        function saludo() {
+            console.log('Hoy es viernes');
+            console.log('¡Buenos días! ¿Cómo estás?');
+        }
+        saludo();
+
+        // Funciones de operaciones básicas
+        const sumar = (a, b) => a + b;
+        const restar = (a, b) => a - b;
+        const multiplicar = (a, b) => a * b;
+        const dividir = (a, b) => b !== 0 ? a / b : 'Error: No se puede dividir por 0';
+
+        // Función principal de calculadora
+        function calculadora(n1, n2, operacion) {
+            switch (operacion.toLowerCase()) {
+                case 'sumar':
+                    return sumar(n1, n2);
+                case 'restar':
+                    return restar(n1, n2);
+                case 'multiplicar':
+                    return multiplicar(n1, n2);
+                case 'dividir':
+                    return dividir(n1, n2);
+                default:
+                    return 'Operación no válida. Por favor elija: sumar, restar, multiplicar o dividir.';
+            }
+        }
+
+        // Solicitar datos al usuario con validaciones
+        const numero1 = parseFloat(prompt('Ingrese el primer número:'));
+        if (isNaN(numero1)) {
+            alert('Por favor, ingrese un número válido para el primer número.');
+        } else {
+            const numero2 = parseFloat(prompt('Ingrese el segundo número:'));
+            if (isNaN(numero2)) {
+                alert('Por favor, ingrese un número válido para el segundo número.');
+            } else {
+                const operacion = prompt('Ingrese la operación (sumar, restar, multiplicar, dividir):').trim();
+                const resultado = calculadora(numero1, numero2, operacion);
+                console.log(`El resultado de la operación es: ${resultado}`);
+                alert(`El resultado es: ${resultado}`);
+            }
+        }
+    </script>
+</body>
+</html>

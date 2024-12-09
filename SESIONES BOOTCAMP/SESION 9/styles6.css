@@ -1,0 +1,30 @@
+.container{
+    background-color: cadetblue;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 16px;
+    margin: 2px;
+    color: aliceblue;
+}
+#texto_resaltado{
+    color: bisque;
+    font-weight: bold;
+    font-size: 25px;
+}
+a[target="_blank"]{
+    color: blue;
+    text-decoration: none;
+    font-size: 30px;
+}
+[href]{
+    color: rgb(80, 80, 80);
+    text-decoration: none;
+    font-size: 30px;
+}
+.container{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: darkmagenta;
+    font-size: 25px;
+    line-height: 1.6;
+}
